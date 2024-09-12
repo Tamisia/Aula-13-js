@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+
+    <form action="Cadatro">
+
+      <button class="button">Nome</button>
+      <input type="name">
+      <br>
+      <button>Email</button>
+      <input type="Email">
+      <br>
+      <button>tel</button>
+      <input type="tel">
+
+    </form>
+
+    <script>
+      let num = 1
+      try {
+        num.toUpperCase();
+      } catch (err) {
+        alert(err.name)
+      } finally {
+        console.log('Terminei meu codigo')
+      }
+
+      try {
+        const valor = 10 / 0;
+        console.log('Valor:', valor);
+      } catch (error) {
+        console.error('Ocorreu um erro:', erro.message);
+      } finally {
+        console.log('Este codigo é executado independentemente de excecuções.');
+      }
+
+
+      function validarIdade(idade) {
+        if (typeof idade !== 'number' || idade < 0) {
+          throw "A idade deve ser um numero positivo.";
+        }
+        if (idade < 18) {
+          throw "Você é menor de idade e não pode acessar o conteúdo.";
+        }
+        console.log('Acesso permitido. Bem Vindo!')
+        try {
+          validarIdade(15);
+        } catch (erro) {
+          console.error("Ocorreu um erro:", erro);
+        }
+      }
+    </script>
+    <script src="atividprat01.js"></script>
+
+  </body>
+
+</html>
